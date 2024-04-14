@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookee</title>
+    <link rel="stylesheet" href="../assets/css/my_style.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <!--! Header Results Section-->
+    <header class="myHeader">
+        <nav class="navBarContainer">
+            <a class="navLogo" href="#">Bookee</a>
+            <input id="searchInput" name="search" placeholder="Search..." type="search" oninput="bookSearch()">
+            <div>
+                <ul class="ulHeader">
+                    <li><a class="navLink" href="#">Home</a></li>
+                    <li><a class="navLink" href="login_page.html">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--! Search Results Section-->
+    <div id="showResults">
+        <div id="searchResults" class="searchResults"></div>
+    </div>
+
+    <main>
+        <!--! Banner Section -->
+        <div class="banner-container">
+            <div class="banner">
+                <img src="../assets/images/banners/banner_1.jpg" alt="Image 1">
+                <img src="../assets/images/banners/banner_2.jpg" alt="Image 2">
+                <img src="../assets/images/banners/banner_5.jpg" alt="Image 3">
+            </div>
+        </div>
+
+        <!--! Category Section -->
+        <h1>Categories</h1>
+        <div class="categoryListContainer"></div>
+
+        <!--! Book List Section-->
+        <h1>New Books</h1>
+        <div class="bookCardContainer"></div>
+
+        <!--! Dialog Section -->
+        <dialog class="bookDialog" id="bookDialog">
+            <button onclick="closeDialog()" class="closeDialogButton" autofocus><i class="material-icons">close</i></button>
+            <div class="DialogContent">
+                <img id="DiaogImage" src="../assets/images/products/watch-3.jpg" alt="">
+                <div class="DialogInfo">
+                    <div class="nameAndDescriptionContainer">
+                        <h2 id="bookName">book Name</h2>
+                        <p id="bookDescription">book Description</p>
+                    </div>
+                    <div class="previewButtonDiv">
+                        <a id="previewButton" href="#"><button class="bookPreviewButton">Preview Book</button></a>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+    </main>
+    <!-- ! Footer section -->
+    <footer class="footer">
+        <div class="social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-snapchat"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <ul class="list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p id="copyright">Future Academy @ 2024</p>
+    </footer>
+<script src="../assets/js/my_js.js"></script>
+</body>
+</html>

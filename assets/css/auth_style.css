@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Audiowide|Righteous|Syne|Lobster Two|Carter One");
+body {
+  font-family: "Syne", sans-serif;
+  background-image: url('../images/auth_background_1.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 50% 0px;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 97vh;
+}
+
+
+.form {
+  background: transparent;
+  border-radius: 16px;
+  border: 2px solid white;
+  backdrop-filter: blur(8px);
+  justify-content: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px 24px 24px;
+  gap: 16px;
+  text-align: center;
+}
+
+/*Form text*/
+.title {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  color: white;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: white;
+}
+
+
+.input {
+  color: #f5f5f5;
+  display: block;
+  background: none;
+  outline: none;
+  height: 2.8vw;
+  width: 25vw;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid white;
+  font-size: 15px;
+  padding: 8px 15px;
+}
+.input::placeholder {
+  color: lightgray;
+}
+
+.input:focus{
+  border-color: hsl(114, 75%, 56%);
+}
+
+p {
+  font-size: .85rem;
+  color: white;
+}
+
+p a {
+  font-weight: bold;
+  color: hsl(114, 75%, 56%);
+  transition: color .3s ease;
+}
+
+p a:hover {
+  color: greenyellow;
+  text-decoration: underline;
+}
+
+/*Button*/
+.submitButton {
+  width: 50%;
+  margin: 15px auto 0px auto;
+  background-color: hsl(114, 75%, 56%);
+  color: #fff;
+  border: 0;
+  border-radius: 18px;
+  padding: 14px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+
+.submitButton:hover {
+  background-color: greenyellow;
+}

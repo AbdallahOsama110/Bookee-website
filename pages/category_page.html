@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Category</title>
+    <link rel="stylesheet" href="../assets/css/my_style.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    <!--! Dialog Section -->
+    <dialog class="bookDialog" id="bookDialog">
+        <button onclick="closeDialog()" class="closeDialogButton" autofocus><i class="material-icons">close</i></button>
+        <div class="DialogContent">
+            <img id="DiaogImage" src="../assets/images/products/watch-3.jpg" alt="">
+            <div class="DialogInfo">
+                <div class="nameAndDescriptionContainer">
+                    <h2 id="bookName">book Name</h2>
+                    <p id="bookDescription">book Description</p>
+                </div>
+                <div class="previewButtonDiv">
+                    <a id="previewButton" href="#"><button class="bookPreviewButton">Preview Book</button></a>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <main>
+        <h1 id="categoryHeader" style="text-align: center; margin-bottom: 50px;">Category</h1>
+        <!--! List of books -->
+        <div class="bookCardContainer"></div>
+    </main>
+
+    <script src="../assets/js/category_script.js"></script>
+</body>
+
+</html>

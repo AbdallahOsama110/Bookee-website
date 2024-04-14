@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css?family=Audiowide|Righteous|Syne|Lobster Two|Carter One");
+
+* {
+    box-sizing: border-box;
+    /* TODO ================= Study this */
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ? body scroll bar style */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 70%);
+    border-radius: 8px;
+}
+
+body,
+input,
+button {
+    font-family: "Syne", sans-serif;
+    font-size: .938rem;
+}
+
+body {
+    background-color: #262626;
+    color: white;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+}
+
+.ulHeader {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2.5rem;
+    text-align: center;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/*!==============================================(Header Section)=========================================================================== */
+
+.myHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #262626;
+    box-shadow: 0 2px 16px hsla(100, 100%, 79%, 0.15);
+    z-index: 100;
+    /* TODO ================= Study this */
+}
+
+.navBarContainer {
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1120px;
+    padding-inline: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navLogo {
+    color: white;
+    font-family: "Lobster Two", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    transition: color .4s;
+}
+
+.navLink {
+    color: white;
+    font-weight: 600;
+    transition: color .4s;
+}
+
+:is(.navLogo, .navLink):hover {
+    color: hsl(114, 75%, 56%);
+}
+
+main {
+    margin-top: 4.5rem;
+    margin-left: 8vw;
+    margin-right: 8vw;
+}
+
+/*!============================================(Banner Section)================================================================================ */
+
+.banner-container {
+    margin-bottom: 4vw;
+    border-radius: 15px;
+    max-width: 100vw;
+    max-height: 450px;
+    overflow: hidden;
+}
+
+.banner {
+    width: 100%;
+    display: flex;
+    animation: scrollBanner 30s forwards infinite;
+    border-radius: 15px;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@keyframes scrollBanner {/* TODO ================= Study this */
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25%,
+    75% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(-200%);
+    }
+}
+
+/*!===========================================(Book Card Section)================================================================================= */
+
+.bookCardContainer {
+    margin: 20px auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    gap: 20px;
+}
+
+.bookCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.208);
+    border-radius: 30px;
+    padding: 15px;
+}
+
+.bookImage {
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.bookCardDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bookName {
+    width: 100%;
+}
+
+.cardInfo {
+    padding: 30px 0 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8em;
+}
+
+.cardInfo i {
+    /* font-size: 0.9em; */
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.cardInfo span {
+    color: hsl(114, 75%, 56%);
+}
+
+/*!===========================================(Dialog Section)================================================================================= */
+
+::backdrop {
+    backdrop-filter: blur(10px);
+}
+
+.bookDialog {
+    width: 70vw;
+    height: 80vh;
+    margin: auto auto;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #3C4042;
+    color: #e8e8e8;
+}
+
+.DialogContent {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 94%;
+}
+
+#DiaogImage {
+    width: 45%;
+    object-fit: contain;
+    /* mix-blend-mode: color-burn; */
+}
+
+.DialogInfo {
+    display: flex;
+    width: 55%;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.nameAndDescriptionContainer {
+    height: 80%;
+    padding: 0 1vw;
+}
+
+.DialogInfo div h2 {
+    margin-bottom: 15px;
+}
+
+#bookDescription {
+    height: 90%;
+    overflow: auto scroll;
+}
+
+/* ?scrollbar style */
+#bookDescription::-webkit-scrollbar {
+    width: 10px;
+}
+
+#bookDescription::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 70%);
+    border-radius: 10px;
+}
+
+.previewButtonDiv {
+    margin: 15px 20px;
+    text-align: end;
+}
+
+.closeDialogButton {
+    color: #e8e8e8;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.closeDialogButton:hover {
+    color: red;
+    transition: all 250ms;
+}
+
+.bookPreviewButton {
+    padding: 15px 25px;
+    border-radius: 15px;
+    color: #e8e8e8;
+    background-color: rgb(0, 164, 0);
+    font-weight: 1000;
+    font-size: 17px;
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+}
+
+.bookPreviewButton:hover {
+    background-color: hsl(114, 75%, 56%);
+}
+
+/*!===========================================(Search Section)================================================================================= */
+
+#searchInput {
+    width: 50vh;
+    color: #f5f5f5;
+    background-color: #242424;
+    margin: .5rem .8rem;
+    padding: .15rem .5rem;
+    min-height: 40px;
+    border-radius: 15px;
+    outline: 1px solid lightgrey;
+    border: none;
+    line-height: 1.15;
+}
+
+input:focus {
+    outline: 1px solid hsl(114, 75%, 56%);
+}
+
+input:hover {
+    outline: 1px solid hsl(114, 75%, 56%);
+}
+
+#searchResults {
+    margin-top: 3.5rem;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    text-align: center;
+    background-color: #212121;
+    padding: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#searchBookItem {
+    display: flex;
+    border-bottom: 1px solid white;
+    padding: 10px 0;
+    transition: .2s;
+}
+
+#searchBookItem:hover {
+    border-bottom: 2px solid white;
+    padding: 15px;
+}
+
+#searchBookItem img {
+    width: 10vh;
+    margin-right: 15px;
+}
+
+/*!===========================================(Category Section)================================================================================= */
+
+.categoryListContainer {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 3vw;
+    margin-top: 20px;
+
+}
+
+/* ? Categrory scrollbar style */
+.categoryListContainer::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.categoryListContainer::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+}
+
+.categoryListContainer:hover::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 70%);
+}
+
+.categoryName {
+    width: 100%;
+    height: 20%;
+    margin-top: 80.5%;
+    background-color: #212121;
+    opacity: 0.9;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*!==============================================(Footer Section)=========================================================================== */
+
+.footer {
+    padding: 85px 0;
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    position: relative;
+    bottom: 0;
+}
+
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: #ccc;
+}
+
+.footer .social a {
+    font-size: 24px;
+    color: inherit;
+    transition: color .4s;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+
+.footer .social a:hover {
+    opacity: 0.9;
+    color: white;
+}
+
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.footer ul a {
+    color: #ccc;
+    opacity: 0.8;
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer ul a:hover {
+    opacity: 1;
+}
+
+.footer #copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+}
